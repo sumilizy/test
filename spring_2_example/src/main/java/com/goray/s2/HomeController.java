@@ -47,7 +47,7 @@ public class HomeController {
 	@RequestMapping("/member/joinProcess")
 	public String joinProcess(@ModelAttribute MemberDTO mdto){
 		/*MemberDTO mdto = new MemberDTO();*/
-		
+		System.out.println("·ê");
 		System.out.println(mdto.getId()+ mdto.getPw()+mdto.getAge());
 		return "redirect:/";
 	}
