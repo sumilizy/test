@@ -1,4 +1,4 @@
-package com.goray.s4;
+package com.goray.member;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,8 +8,8 @@ import java.sql.SQLException;
 import com.goray.util.DBConnector;
 
 public class MemberDAO {
-
-	public MemberDTO login(MemberDTO mdto){
+	
+	public memberDTO login(memberDTO mdto){
 		Connection con = DBConnector.getConnect();
 		String sql = "select * from member where id=? and pw=?";
 		PreparedStatement st = null;
@@ -27,13 +27,9 @@ public class MemberDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			mdto = null;
 		} finally {
 			DBConnector.disconnect(rs, st, con);
 		} return mdto;
 	}
-	
-	
 
-	
 }

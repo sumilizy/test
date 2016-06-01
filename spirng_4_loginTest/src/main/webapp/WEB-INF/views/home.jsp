@@ -15,12 +15,16 @@
 
 <hr><br>
 
+<p>${message }</p>
+
 <c:choose>
 	<c:when test="${mdto ne null}">
-		${sessionScope.mdto.id }
+		${sessionScope.mdto.id } 
 		<a href="member/logout"><h2>LOG OUT</h2></a>
+		
 	</c:when>
 	<c:otherwise>
+		
 		<a href="member/login"><h2>LOG IN</h2></a>
 		<a href="member/join"><h2>SIGN UP</h2></a>
 	</c:otherwise>

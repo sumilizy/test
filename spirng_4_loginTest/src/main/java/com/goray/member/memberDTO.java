@@ -1,7 +1,7 @@
-package com.goray.s4;
+package com.goray.member;
 
-public class MemberDTO {
-
+public class memberDTO {
+	
 	private String id;
 	private String pw;
 	private String name;
@@ -31,7 +31,5 @@ public class MemberDTO {
 	public void setAge(String age) {
 		this.age = age;
 	}
-	
-	
-	
+
 }
